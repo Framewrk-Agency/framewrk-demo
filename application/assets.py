@@ -7,12 +7,12 @@ def demo_assets(app):
     Environment.auto_build = False
     Environment.debug = True
     # Stylesheets Bundle
-    less_bundle = Bundle('src/less/demo/*.less',
+    less_bundle = Bundle('src/less/*.less',
                          filters='less, cssmin',
                          output='dist/css/demo.css',
                          extra={'rel': 'stylesheet/less'})
     # JavaScript Bundle
-    js_bundle = Bundle('src/js/demo.js',
+    js_bundle = Bundle('src/js/*.js',
                        filters='jsmin',
                        output='dist/js/demo.min.js')
     # Register assets
