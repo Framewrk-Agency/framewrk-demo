@@ -1,0 +1,16 @@
+{% extends "question.html" %}
+
+{% block answer %}
+<div class="answer">
+  <div class="answer-background">
+    <p>Choose your answer</p>
+    {% for choice in choices %}
+    <div class="answer-container">
+      <div class="answer-tooltip">{{ tooltips[loop.index] }}</div>
+      <button class="answer-option" id="{{loop.index}}">{{choice}}</button>
+    </div>
+    {% endfor %}
+  </div>
+  <button id="answer-submit" class="submit">Submit Answer</button>
+</div>
+{% endblock %}
